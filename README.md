@@ -1,6 +1,4 @@
 
-yarn start
-
 # CryptoCompare Market Data
 
 ## Install
