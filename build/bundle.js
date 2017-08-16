@@ -4387,7 +4387,7 @@ var App = function (_Component) {
       var head = document.getElementsByTagName('head')[0];
       var script = document.createElement('script');
       script.type = 'text/javascript';
-      script.src = '/streamer.js';
+      script.src = 'https://estebanrfp.github.io/cryptocompare-market-data/build/streamer.js';
       script.onload = this.helper;
       head.appendChild(script);
 

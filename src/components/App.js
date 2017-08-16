@@ -39,7 +39,7 @@ class App extends Component {
     const head = document.getElementsByTagName('head')[0]
     const script = document.createElement('script')
     script.type = 'text/javascript'
-    script.src = '/streamer.js'
+    script.src = 'https://estebanrfp.github.io/cryptocompare-market-data/build/streamer.js'
     script.onload = this.helper
     head.appendChild(script)
 
