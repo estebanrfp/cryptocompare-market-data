@@ -1,0 +1,26 @@
+{
+  "name": "ccmmarketdata",
+  "version": "0.1.0",
+  "description": "Access to CriptoCompare Market Data.",
+  "scripts": {
+    "start": "webpack-dev-server --inline",
+    "build": "webpack --config webpack.config --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/estebanrfp/cryptocompare-market-data.git"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "preact": "^8.1.0",
+    "socket.io-client": "^2.0.3"
+  }
+}
