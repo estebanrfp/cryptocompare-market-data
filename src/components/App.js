@@ -137,7 +137,9 @@ class App extends Component {
     return (
       <div>
         <style>{`
+        @import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
         body {
+          font-family: 'Saira Semi Condensed', sans-serif;
           margin-top: 1rem;
           padding: 1rem;
           overflow: hidden;
@@ -146,6 +148,61 @@ class App extends Component {
             width: 100%;
             height: 100%;
         }
+        td {
+          text-align: center;
+        }
+        .borderLeft {
+          border-top-left-radius: 10px;
+        }
+        .borderRight {
+          border-top-right-radius: 10px;
+        }
+        .tablemod {
+          margin: 1em 0;
+          width: 100%;
+          overflow: hidden;
+          background: #FFF;
+          color: #024457;
+          border-radius: 10px;
+          border: 1px solid #167F92;
+        }
+        .tablemod tr {
+          border: 1px solid #D9E4E6;
+        }
+        .tablemod tr:nth-child(odd) {
+          background-color: #EAF3F3;
+        }
+        .tablemod th {
+          display: none;
+          border: 1px solid #FFF;
+          background-color: #167F92;
+          color: #FFF;
+          padding: 1em;
+        }
+        .tablemod th:first-child {
+          display: table-cell;
+        }
+        .tablemod th:nth-child(2) {
+          display: table-cell;
+        }
+        .tablemod th:nth-child(3) {
+          display: table-cell;
+        }
+        .tablemod th:nth-child(4) {
+          display: table-cell;
+        }
+        .tablemod th:nth-child(5) {
+          display: table-cell;
+        }
+        .tablemod th:nth-child(6) {
+          display: table-cell;
+        }
+        .tablemod th:nth-child(7) {
+          display: table-cell;
+        }
+        .tablemod th:nth-child(8) {
+          display: table-cell;
+        }
       `}</style>
         <article class="Post">
           <div id="content" />
@@ -153,18 +210,18 @@ class App extends Component {
             <div class="row">
               <div class="col-xs-12">
                 <div class="table-responsive">
-                  <table summary="test" style={ this.tablestyle } class="table table-bordered table-hover">
+                  <table summary="test" style={ this.tablestyle } class="table table-bordered table-hover tablemod">
                     {/* <caption class="text-center">text <a href="https://getbootstrap.com/css/#tables-responsive" target="_blank" rel="noopener noreferrer">Bootstrap</a>:</caption> */}
                     <thead>
                       <tr>
-                        <th>Moneda</th>
+                        <th class="borderLeft">Moneda</th>
                         <th>Precio <span id="price" /></th>
                         <th>Mercado</th>
                         <th>Volumen 24H</th>
                         <th>Algoritmo</th>
                         <th>ID Última transacción</th>
                         <th>Volumen</th>
-                        <th>Cargo 24H</th>
+                        <th class="borderRight">Cargo 24H</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -178,8 +235,7 @@ class App extends Component {
                               <img role="presentation" width="25" alt="presentation" src={ item.Image } />
                             </td>
                             <td>
-                              <p>{item.CoinName}</p>
-                              <p>{item.Name}</p>
+                              <p>{item.CoinName} - {item.Name}</p>
                             </td>
                           </td>
                           <td id={ `price_${ item.Name }USD` } >...</td>
